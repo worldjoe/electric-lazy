@@ -1,2 +1,3 @@
+#include RunSession.ahk
 Joy2::
-Run, C:\Program Files (x86)\MacroRecorder\MacroRecorder.exe -play="%UserProfile%\Documents\Macro Recorder\StarTripin.mrf"
+RunSession("StarTrippin.m3u", "ELL OG - Star Trippin.PRw")
