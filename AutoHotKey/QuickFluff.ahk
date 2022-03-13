@@ -1,3 +1,3 @@
 #include RunSession.ahk
 Joy7::
-RunSession("QuickFluff.m3u", "ELL - Quick Fluff.PRw")
+RunSession("QuickFluff.m3u", "ELL - Quick Fluff.PRw", 0)

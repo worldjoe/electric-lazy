@@ -1,3 +1,3 @@
 #include RunSession.ahk
 Joy4::
-RunSession("RiversEdge.m3u", "ELL - Rivers Edge.PRw")
+RunSession("RiversEdge.m3u", "ELL - Rivers Edge.PRw",0)

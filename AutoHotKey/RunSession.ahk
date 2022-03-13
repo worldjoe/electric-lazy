@@ -1,4 +1,4 @@
-RunSession(playlist, procyonSession)
+RunSession(playlist, procyonSession, customSleep)
 {
 	clipboard := ""
 	RunWait, %comspec% /c %UserProfile%\Documents\CLeveR.exe status | clip,,hide
@@ -9,11 +9,14 @@ RunSession(playlist, procyonSession)
 		WinActivate ahk_exe Procyon2_3_00.exe
 		SetKeyDelay, 10,10
 		send {Alt down}f{Alt up}{Down}{Enter}
-		sleep 2000
+		sleep 9000
 		send %procyonSession%
+		sleep 7000
 		send {Enter}
+		sleep 8000
 		send {Alt down}u{Alt up}{Down}
-		sleep 11600
+		sleep 10100
+		sleep %customSleep%
 		send {Enter}
 	
 	} else {
