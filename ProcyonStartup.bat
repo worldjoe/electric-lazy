@@ -2,11 +2,12 @@ START "" "C:\Program Files (x86)\Procyon AVS\Procyon2_3_00.exe"
 TIMEOUT /T 90
 START ""  "C:\Program Files\AutoHotkey\AutoHotkey.exe" "%UserProfile%\Documents\AutoHotKey\ProcyonOpenPort.ahk"
 TIMEOUT /T 40
-IF EXIST "%UserProfile%\Documents\displaysleep.bat" call "%UserProfile%\Documents\displaysleep.bat"
-TIMEOUT /T 20
 
 rem Allow the system sounds to play during startup, especially our text to speech below
 %UserProfile%\Documents\nircmd setdefaultsounddevice "Speakers"
+
+IF EXIST "%UserProfile%\Documents\displaysleep.bat" call "%UserProfile%\Documents\displaysleep.bat"
+TIMEOUT /T 20
 
 START "" "C:\Program Files (x86)\Winamp\winamp.exe"
 TIMEOUT /T 20
