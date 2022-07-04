@@ -1,6 +1,9 @@
+chcp 65001 >NUL
+rem the line above sets the batch file to unicode because oherwise the registered trademark in the soundVolumeView command below breaks
+
 rem Allow our text to speech below to play on the speakers
 %UserProfile%\Documents\nircmd setdefaultsounddevice "Speakers"
-%UserProfile%\Documents\soundvolumeview\SoundVolumeView.exe /SetDefault "High Definition Audio Device\Device\Speakers\Render" all "winamp.exe"
+%UserProfile%\Documents\soundvolumeview\SoundVolumeView.exe /SetDefault "2- Intel® Smart Sound Technology (Intel® SST)\Device\Speakers\Render" all "winamp.exe"
 
 rem Making the temp file
 :num
@@ -18,5 +21,5 @@ rem pipe all the system sounds to our fake Virtual VB speakers so we don't hear 
 rem make sure that winamp is playing to the speakers
 %UserProfile%\Documents\CLeveR.exe loadplay %UserProfile%\Documents\silence.m3u
 %UserProfile%\Documents\nircmd setappvolume winamp.exe 1 "Speakers"
-%UserProfile%\Documents\soundvolumeview\SoundVolumeView.exe /SetAppDefault "High Definition Audio Device\Device\Speakers\Render" all "winamp.exe"
+%UserProfile%\Documents\soundvolumeview\SoundVolumeView.exe /SetAppDefault "2- Intel® Smart Sound Technology (Intel® SST)\Device\Speakers\Render" all "winamp.exe"
 %UserProfile%\Documents\CLeveR.exe stop
