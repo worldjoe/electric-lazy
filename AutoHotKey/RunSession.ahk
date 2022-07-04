@@ -15,7 +15,7 @@ RunSession(playlist, procyonSession, customSleep)
 		send {Enter}
 		sleep 8000
 		send {Alt down}u{Alt up}{Down}
-		sleep 10100
+		sleep 10780
 		sleep %customSleep%
 		send {Enter}
 	
