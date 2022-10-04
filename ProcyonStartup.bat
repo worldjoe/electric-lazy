@@ -1,7 +1,13 @@
 chcp 65001 >NUL
 rem the line above sets the batch file to unicode because oherwise the registered trademark in the soundVolumeView command below breaks
+if exist "C:\Program Files (x86)\FeikongTech\FkShow2022\FkShow2022.exe" START "" "C:\Program Files (x86)\FeikongTech\FkShow2022\FkShow2022.exe" "%UserProfile%\Documents\FKShow\Ready.nfsprj"
+TIMEOUT /T 60
 START "" "C:\Program Files (x86)\Procyon AVS\Procyon2_3_00.exe"
 TIMEOUT /T 60
+rem some of the winamp settings get wiped if the machine shuts down prematurely
+copy %UserProfile%\Documents\winamp.ini %UserProfile%\AppData\Roaming\Winamp
+START "" "C:\Program Files (x86)\Winamp\winamp.exe"
+
 START ""  "C:\Program Files\AutoHotkey\AutoHotkey.exe" "%UserProfile%\Documents\AutoHotKey\ProcyonOpenPort.ahk"
 TIMEOUT /T 40
 
@@ -31,3 +37,5 @@ rem %UserProfile%\Documents\nircmd setappvolume winamp.exe 1 "Speakers"
 %UserProfile%\Documents\soundvolumeview\SoundVolumeView.exe /SetAppDefault "2- Intel® Smart Sound Technology (Intel® SST)\Device\Speakers\Render" all "winamp.exe"
 TIMEOUT /T 5
 %UserProfile%\Documents\CLeveR.exe stop
+if exist "C:\Program Files (x86)\FeikongTech\FkShow2022\FkShow2022.exe" START ""  "C:\Program Files\AutoHotkey\AutoHotkey.exe" "%UserProfile%\Documents\AutoHotKey\FKShowReady.ahk"
+TIMEOUT /T 40
