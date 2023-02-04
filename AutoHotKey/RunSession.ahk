@@ -22,7 +22,7 @@ RunSession(playlist, procyonSession, customSleep, ledSignFile)
 		send {Enter}
 		sleep 8000
 		send {Alt down}u{Alt up}{Down}
-		sleep 10780
+		sleep 10000
 		sleep %customSleep%
 		send {Enter}
 		SignCountDown()
