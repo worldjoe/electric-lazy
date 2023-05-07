@@ -1,8 +1,9 @@
 IncrementRideCounter(playlist)
 {
-	IniRead, lastCount, %UserProfile%\Documents\count.ini, Count, %playlist%
+	FormatTime,CurrentDateTime,, yyyyMMdd
+	IniRead, lastCount, %UserProfile%\Documents\count-%CurrentDateTime%.ini, Count, %playlist%
 	if lastCount = ERROR
 		lastCount=0
 	lastCount++
-	IniWrite, %lastCount%, %UserProfile%\Documents\count.ini, Count, %playlist%
+	IniWrite, %lastCount%, %UserProfile%\Documents\count-%CurrentDateTime%.ini, Count, %playlist%
 }
