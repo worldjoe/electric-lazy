@@ -1,7 +1,7 @@
 chcp 65001 >NUL
 rem the line above sets the batch file to unicode because oherwise the registered trademark in the soundVolumeView command below breaks
 rem if exist "C:\Program Files (x86)\FeikongTech\FkShow2022\FkShow2022.exe" START "" "C:\Program Files (x86)\FeikongTech\FkShow2022\FkShow2022.exe" "%UserProfile%\Documents\FKShow\Ready.nfsprj"
-TIMEOUT /T 60
+rem TIMEOUT /T 60
 START "" "C:\Program Files (x86)\Procyon AVS\Procyon2_3_00.exe"
 TIMEOUT /T 60
 rem some of the winamp settings get wiped if the machine shuts down prematurely
