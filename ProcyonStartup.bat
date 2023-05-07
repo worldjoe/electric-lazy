@@ -7,6 +7,7 @@ TIMEOUT /T 60
 rem some of the winamp settings get wiped if the machine shuts down prematurely
 copy %UserProfile%\Documents\winamp.ini %UserProfile%\AppData\Roaming\Winamp
 START "" "C:\Program Files (x86)\Winamp\winamp.exe"
+TIMEOUT /T 60
 
 START ""  "C:\Program Files\AutoHotkey\AutoHotkey.exe" "%UserProfile%\Documents\AutoHotKey\ProcyonOpenPort.ahk"
 TIMEOUT /T 40
