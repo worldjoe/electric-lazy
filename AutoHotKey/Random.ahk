@@ -16,7 +16,7 @@ IfInString, Clipboard, % "Stop"
 		RunWait, %comspec% /c %UserProfile%\Documents\Random.bat "Star Trippin"
 		RunSession("StarTrippin.m3u", "ELL OG - Star Trippin345.PRw",0, "StarTri.nfsprj")
 	case 3:
-		RunWait, %comspec% /c %UserProfile%\Documents\Random.bat "Ablyss"
+		RunWait, %comspec% /c %UserProfile%\Documents\Random.bat "Uh Bliss"
 		RunSession("Ablyss.m3u", "ELL - Ablyss789012345.PRw",0, "Ablyss1.nfsprj")
 	case 4:
 		RunWait, %comspec% /c %UserProfile%\Documents\Random.bat "Rivers Edge"
