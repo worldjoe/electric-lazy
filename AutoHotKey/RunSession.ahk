@@ -10,7 +10,7 @@ RunSession(playlist, procyonSession, customSleep, ledSignFile)
 		;StringTrimRight, playlistWithOutExtension, playlist, 4 
 		;RunWait, %comspec% /c %UserProfile%\Documents\Starting.bat %playlistWithOutExtension%
 		;SignSendOne("HC0310Minutes.LED")
-		SignLoad(ledSignFile)
+		;SignLoad(ledSignFile)
 		RunWait, %comspec% /c %UserProfile%\Documents\CLeveR.exe loadplay %UserProfile%\Documents\%playlist%,,hide
 		WinActivate ahk_exe Procyon2_3_00.exe
 		sleep 1000
