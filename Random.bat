@@ -11,6 +11,7 @@ set num=%random%
 if exist %TEMP%\temp%num%.vbs goto num
 echo ' > "%TEMP%\temp%num%.vbs"
 echo set speech = Wscript.CreateObject("SAPI.spVoice") >> "%TEMP%\temp%num%.vbs"
+echo speech.Volume = 50 >> "%TEMP%\temp%num%.vbs"
 echo speech.speak "The Electric Lazy chose %~1" >> "%TEMP%\temp%num%.vbs"
 %UserProfile%\Documents\CLeveR.exe loadplay "%UserProfile%\Documents\GodMachine.m3u"
 timeout /t 5
